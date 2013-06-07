@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" android:background="@drawable/bg">
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" android:background="@drawable/top_bar_little">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="НАСТРОЙКИ"
+                android:id="@+id/title_info" android:gravity="center|center_vertical|center_horizontal"
+                android:textColor="@android:color/black"/>
+    </FrameLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:minHeight="150dp">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="TROLLFACES"
+                android:id="@+id/apptitle" android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
+                android:textColor="@android:color/black" android:textSize="22dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Версия 1.0"
+                android:id="@+id/vertitle" android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
+                android:textColor="@android:color/black" android:textSize="18dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Разработчик: А-Мобаил"
+                android:id="@+id/devtitle" android:gravity="center|center_vertical|center_horizontal"
+                android:textColor="@android:color/black" android:textSize="16dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Дизайн: А-Мобаил"
+                android:id="@+id/designtitle" android:gravity="center|center_vertical|center_horizontal"
+                android:textColor="@android:color/black" android:textSize="16dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Фирма (с) 2013"
+                android:id="@+id/manufacturetitle" android:gravity="center|center_vertical|center_horizontal"
+                android:textColor="@android:color/black" android:textSize="16dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_gravity="center"
+            android:background="@drawable/bottom_bar_big" android:paddingTop="40dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Обратная связь"
+            android:id="@+id/back_report" android:layout_gravity="center"
+            android:background="@drawable/button_with_arrow"
+            android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp" android:textColor="@android:color/black"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Поделиться"
+                android:id="@+id/sharing" android:layout_gravity="center"
+                android:background="@drawable/button_with_arrow"
+                android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp" android:textColor="@android:color/black"/>
+    </LinearLayout>
+</LinearLayout>

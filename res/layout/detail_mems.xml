@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" android:background="@drawable/bg">
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" android:background="@drawable/top_bar_little">
+        <Button
+
+                android:src="@drawable/info"
+                android:background="@drawable/camera_selector"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:id="@+id/photo_mem_detail" android:layout_gravity="center|right"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp" android:layout_marginTop="10dp"/>
+    </FrameLayout>
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/photo_mem"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp" android:layout_marginLeft="30dp" android:layout_weight="1"
+            android:scaleType="centerInside"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_gravity="center"
+            android:background="@drawable/bottom_bar_big" android:paddingTop="40dp" android:layout_weight="1">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отправить ММС"
+                android:id="@+id/sendmms" android:layout_gravity="center"
+                android:background="@drawable/buttons_selector"
+                android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp"
+                android:textColor="@android:color/black" android:layout_weight="1"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сохранить на телефон"
+                android:id="@+id/save" android:layout_gravity="center" android:background="@drawable/buttons_selector"
+                android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black" android:layout_weight="1"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить в избранное"
+                android:id="@+id/addtofavorite" android:layout_gravity="center"
+                android:background="@drawable/buttons_selector"
+                android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp"
+                android:textColor="@android:color/black" android:layout_weight="1" android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+</LinearLayout>

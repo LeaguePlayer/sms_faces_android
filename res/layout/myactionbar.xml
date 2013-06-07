@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:background="@drawable/croptop_bar">
+    <ImageButton android:src="@drawable/info"
+                 android:background="?attr/actionBarItemBackground"
+                 android:layout_width="?attr/actionBarSize"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerInside"
+                 android:id="@+id/item1"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentTop="true"/>
+
+    <ImageButton android:src="@drawable/camera_selector"
+                 android:background="?attr/actionBarItemBackground"
+                 android:layout_width="?attr/actionBarSize"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerInside"
+                 android:id="@+id/item2"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignParentTop="true" android:layout_marginRight="15dp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="New Text"
+            android:id="@+id/ttitle_application" android:gravity="center|center_vertical|center_horizontal"/>
+</RelativeLayout>

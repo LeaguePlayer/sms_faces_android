@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" android:background="@drawable/bg">
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" android:background="@drawable/top_bar_little">
+    </FrameLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:minHeight="150dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" android:layout_gravity="center">
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Текст"
+                    android:id="@+id/devtitle" android:gravity="center|center_vertical|center_horizontal"
+                    android:textColor="@android:color/black" android:textSize="16dp" android:layout_weight="1"
+                    android:layout_gravity="center"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/text" android:layout_weight="1" android:layout_gravity="center"
+                    android:textColor="@android:color/black" android:singleLine="true"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" android:layout_gravity="center">
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Размер"
+                    android:id="@+id/designtitle" android:gravity="center|center_vertical|center_horizontal"
+                    android:textColor="@android:color/black" android:textSize="16dp" android:layout_weight="1"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="16"
+                    android:id="@+id/textheight" android:layout_weight="1" android:inputType="numberDecimal"
+                    android:textColor="@android:color/black" android:gravity="center_vertical|center_horizontal"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" android:layout_gravity="center">
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Цвет"
+                    android:gravity="center|center_vertical|center_horizontal"
+                    android:textColor="@android:color/black" android:textSize="16dp" android:layout_weight="1"
+                    android:layout_gravity="center"/>
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1">
+                <Button
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/colorchooser" android:layout_gravity="center"/>
+            </FrameLayout>
+        </LinearLayout>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Создать надпись"
+                android:id="@+id/ok_button" android:background="@drawable/buttons_selector"
+                android:textColor="@android:color/black" android:layout_margin="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_gravity="center"
+            android:background="@drawable/bottom_bar_big" android:paddingTop="40dp">
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent" android:background="@drawable/bg" android:clickable="false"
+          android:orientation="vertical">
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom" android:src="@drawable/top_bar_crop" android:scaleType="fitXY"
+            android:layout_alignParentStart="false"/>
+    <GridView
+              android:id="@+id/catalog_grid"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_marginBottom="10dp"
+              android:gravity="center|center_vertical|center_horizontal"
+              android:focusable="false" android:focusableInTouchMode="false" android:paddingTop="20dp">
+
+    </GridView>
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom" android:src="@drawable/bottom_bar_crop" android:scaleType="fitXY"
+            android:layout_alignParentStart="false" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

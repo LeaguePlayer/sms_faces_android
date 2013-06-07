@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SmsFaces" parent="Theme.Sherlock.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="actionBarTabStyle">@style/MyTabView</item>
+    </style>
+    <style name="MyActionBar" parent="Widget.Sherlock.ActionBar">
+        <item name="android:background">@drawable/croptop_bar</item>
+        <item name="background">@drawable/croptop_bar</item>
+    </style>
+
+    <style name="MyTabView" parent="Widget.Sherlock.ActionBar.TabView">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/tab_indicator</item>
+
+    </style>
+    <style name="Theme.app" parent="@style/Theme.Sherlock.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="actionBarTabStyle">@style/TabStyle</item>
+        <item name="android:actionBarTabStyle">@style/TabStyle</item>
+        <item name="actionBarTabBarStyle">@style/TabBarStyle</item>
+        <item name="android:actionBarTabBarStyle">@style/TabBarStyle</item>
+        <item name="android:actionBarTabTextStyle">@style/TabTextStyle</item>
+        <item name="actionBarTabTextStyle">@style/TabTextStyle</item>
+
+    </style>
+
+
+    <style name="TabBarStyle" parent="Widget.Sherlock.ActionBar.TabBar">
+        <item name="android:divider">?attr/actionBarDivider</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="background">@drawable/tab_indicator</item>
+        <item name="android:background">@drawable/tab_indicator</item>
+    </style>
+    <style name="TabStyle" parent="Widget.Sherlock.ActionBar.TabView">
+        <item name="android:scrollHorizontally">false</item>
+        <item name="background">@drawable/tab_indicator</item>
+        <item name="android:background">@drawable/tab_indicator</item>
+
+    </style>
+    <style name="TabTextStyle" parent="Widget.Sherlock.ActionBar.TabText">
+        <item name="android:capitalize">words</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:id="@+id/actions"
+            android:background="@drawable/top"
+            android:layout_alignParentTop="true">
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageDelete"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon1"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageTurn"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/icon2"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageText"
+                android:layout_gravity="center"
+                android:src="@drawable/icon3"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageHelp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon4"
+                android:layout_weight="1"/>
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/photoContainer"
+            android:layout_above="@+id/categoriesContainer"
+            android:layout_below="@+id/actions"
+            >
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:id="@+id/photo"
+                android:layout_gravity="center"
+                />
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="140dp"
+            android:id="@+id/categoriesContainer"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="@drawable/strong_bottom_bar">
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                >
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Cписок категорий"
+                    android:background="@drawable/drop_down_list"
+                    android:id="@+id/chooseCategory"
+                    android:layout_gravity="center"/>
+        </LinearLayout>
+        <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:id="@+id/hsv"
+                android:background="@drawable/bg"
+                >
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="fill_parent"
+                          android:id="@+id/mems"/>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/help"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            />
+</RelativeLayout>
