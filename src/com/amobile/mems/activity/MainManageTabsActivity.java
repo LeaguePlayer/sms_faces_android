@@ -32,6 +32,7 @@ import com.amobile.mems.fragments.CatalogFragment;
 import com.amobile.mems.fragments.FavoritesFragment;
 import com.amobile.mems.fragments.LastSeenFragment;
 import com.amobile.mems.helpers.AssetsHelper;
+import com.amobile.mems.helpers.ImageUtils;
 import com.android.camera.CropImage;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
@@ -52,7 +53,7 @@ public class MainManageTabsActivity extends SherlockFragmentActivity {
     public AlertDialog dialog;
     Context con;
     ContentValues values;
-     Uri photoUri;
+   public Uri photoUri;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -174,6 +175,7 @@ public class MainManageTabsActivity extends SherlockFragmentActivity {
                 intent.setData(AssetsHelper.photoUri);
                 startActivityForResult(intent,ACTIVITY_CROP_IMAGE);
             } else if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+                photoUri = ImageUtils.getInstance().getTempUri(MainManageTabsActivity.this);
                 AssetsHelper.photoUri=photoUri;
                 Intent intent = new Intent(getApplicationContext(), CropImage.class);
                // intent.putExtra("action", "2");
@@ -204,6 +206,7 @@ public class MainManageTabsActivity extends SherlockFragmentActivity {
                 //intent.putExtra("picturePath", picturePath);
                 startActivity(intent);
             } else if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK ) {
+                photoUri = ImageUtils.getInstance().getTempUri(MainManageTabsActivity.this);
                AssetsHelper.photoUri=photoUri;
                 Intent intent = new Intent(getApplicationContext(), drawing.class);
                 intent.putExtra("action", "2");
@@ -246,10 +249,10 @@ public class MainManageTabsActivity extends SherlockFragmentActivity {
                     @Override
                     public void onClick(View view) {
                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                        File photo = new File(Environment.getExternalStorageDirectory(),  "Pic.jpg");
+                        photoUri = ImageUtils.getInstance().getTempUri(MainManageTabsActivity.this);
                         intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                                Uri.fromFile(photo));
-                        photoUri = Uri.fromFile(photo);
+                                photoUri);
+
                         startActivityForResult(intent, CAMERA_REQUEST);
                         dialog.dismiss();
                     }

@@ -47,13 +47,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.CountDownLatch;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Vadim
- * Date: 03.05.13
- * Time: 19:02
- * To change this template use File | Settings | File Templates.
- */
 public class drawing extends SherlockFragmentActivity implements View.OnClickListener, View.OnTouchListener,
         View.OnLongClickListener {
     public static Bitmap tmp_bitmap;
@@ -93,6 +86,23 @@ public class drawing extends SherlockFragmentActivity implements View.OnClickLis
         SetCustomActionBar();
         init();
 
+    }
+//
+//    @Override
+//    protected void onSaveInstanceState(Bundle outState) {
+//        outState.putSerializable("mems",memsOnScreen);
+//        super.onSaveInstanceState(outState);
+//    }
+//
+//    @Override
+//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+//        memsOnScreen = (ArrayList<View>)savedInstanceState.getSerializable("mems");
+//        super.onRestoreInstanceState(savedInstanceState);
+//    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     public void SetCustomActionBar() {

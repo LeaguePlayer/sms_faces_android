@@ -23,6 +23,7 @@ import com.amobile.mems.R;
 import com.amobile.mems.database.mems_db;
 import com.amobile.mems.helpers.AssetsHelper;
 import com.amobile.mems.helpers.CatalogCell;
+import com.amobile.mems.helpers.ImageUtils;
 import com.android.camera.CropImage;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -150,7 +151,7 @@ public class Choose_mem extends Activity {
                     });
                     alertDialog.show();
                 } catch (IOException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    e.printStackTrace();
                 }
 
 
@@ -221,6 +222,7 @@ public class Choose_mem extends Activity {
                 intent.setData(AssetsHelper.photoUri);
                 startActivityForResult(intent,ACTIVITY_CROP_IMAGE);
             } else if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+                photoUri = ImageUtils.getInstance().getTempUri(Choose_mem.this);
                 AssetsHelper.photoUri=photoUri;
                 Intent intent = new Intent(getApplicationContext(), CropImage.class);
                 // intent.putExtra("action", "2");
@@ -251,6 +253,7 @@ public class Choose_mem extends Activity {
                 //intent.putExtra("picturePath", picturePath);
                 startActivity(intent);
             } else if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK ) {
+                photoUri = ImageUtils.getInstance().getTempUri(Choose_mem.this);
                 AssetsHelper.photoUri=photoUri;
                 Intent intent = new Intent(getApplicationContext(), drawing.class);
                 intent.putExtra("action", "2");
@@ -293,10 +296,10 @@ public class Choose_mem extends Activity {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                        File photo = new File(Environment.getExternalStorageDirectory(),  "Pic.jpg");
+                        photoUri = ImageUtils.getInstance().getTempUri(Choose_mem.this);
                         intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                                Uri.fromFile(photo));
-                        photoUri = Uri.fromFile(photo);
+                                photoUri);
+
                         startActivityForResult(intent, CAMERA_REQUEST);
                         dialog.dismiss();
                     }
