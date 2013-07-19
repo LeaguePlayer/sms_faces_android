@@ -54,7 +54,7 @@ public class CatalogFragment extends SherlockFragment {
         db= new mems_db(con);
         catalog=(GridView)getView().findViewById(R.id.catalog_grid);
         catalog.setNumColumns(3);
-        pd = ProgressDialog.show(getSherlockActivity(), "Подготовка данных", "Пожалуйста подождите...", true, true);
+        //pd = ProgressDialog.show(getSherlockActivity(), "Подготовка данных", "Пожалуйста подождите...", true, true);
         db.open();
 
         if(isMain)
@@ -67,7 +67,7 @@ public class CatalogFragment extends SherlockFragment {
         db.close();
         adapter= new GridAdapter(getActivity(),data);
         catalog.setAdapter(adapter);
-        if (pd != null && pd.isShowing()) pd.dismiss();
+
         catalog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

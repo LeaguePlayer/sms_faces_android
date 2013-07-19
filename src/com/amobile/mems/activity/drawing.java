@@ -153,7 +153,30 @@ public class drawing extends SherlockFragmentActivity implements View.OnClickLis
             ImageLoader imageLoader = ImageLoader.getInstance(); // Получили экземпляр
             // imageLoader.init(ImageLoaderConfiguration.createDefault(mContext));
             String imageUri = AssetsHelper.photoUri.toString();
-            imageLoader.displayImage(imageUri, photo);
+//            Uri target = AssetsHelper.photoUri;
+//            mAllImages = ImageManager.makeImageList(mContentResolver, target,
+//                    ImageManager.SORT_ASCENDING);
+//            mImage = mAllImages.getImageForUri(target);
+//            if (mImage != null) {
+//                // Don't read in really large bitmaps. Use the (big) thumbnail
+//                // instead.
+//                // TODO when saving the resulting bitmap use the
+//                // decode/crop/encode api so we don't lose any resolution.
+//                mBitmap = mImage.thumbBitmap(IImage.ROTATE_AS_NEEDED);
+//            }
+//            photo.setImageBitmap(mBitmap);
+            if(action==1)
+            {
+                try {
+                    photo.setImageBitmap(scaleImage(this,AssetsHelper.photoUri));
+                } catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+            else
+            {
+                imageLoader.displayImage(imageUri, photo);
+            }
         }
         else
         {

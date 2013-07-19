@@ -4,6 +4,7 @@ import afzkl.development.mColorPicker.ColorPickerActivity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -54,14 +55,17 @@ public class MainManageTabsActivity extends SherlockFragmentActivity {
     Context con;
     ContentValues values;
    public Uri photoUri;
+    ProgressDialog pd;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_app);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabs_activity);
+        pd = ProgressDialog.show(this, "Подготовка данных", "Пожалуйста подождите...", true, true);
         Init();
         SetTabs();
+        if (pd != null && pd.isShowing()) pd.dismiss();
     }
 
     public void Init() {

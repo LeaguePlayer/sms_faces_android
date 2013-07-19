@@ -218,7 +218,7 @@ public class Choose_mem extends Activity {
                 AssetsHelper.photoUri=selectedImage;
                 Intent intent = new Intent(getApplicationContext(), CropImage.class);
                 //intent.putExtra("action", "1");
-              //  intent.putExtra("scaleUp", true);
+                // intent.putExtra("scaleUp", true);
                 intent.setData(AssetsHelper.photoUri);
                 startActivityForResult(intent,ACTIVITY_CROP_IMAGE);
             } else if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
@@ -226,7 +226,7 @@ public class Choose_mem extends Activity {
                 AssetsHelper.photoUri=photoUri;
                 Intent intent = new Intent(getApplicationContext(), CropImage.class);
                 // intent.putExtra("action", "2");
-              //  intent.putExtra("scaleUp", true);
+                //intent.putExtra("scaleUp", true);
                 intent.setData(AssetsHelper.photoUri);
                 startActivityForResult(intent,ACTIVITY_CROP_IMAGE);
             } else if (requestCode == ACTIVITY_COLOR_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
